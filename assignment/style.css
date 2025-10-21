@@ -1,0 +1,159 @@
+body {
+  font-family: Arial,sans-serif;
+  margin:0;
+  padding:0;
+}
+
+header {
+  background-color: #005baa;
+  color: white;
+  padding: 15px;
+  display: flex;
+  align-items: center;      
+  justify-content: space-between;
+}
+
+.logo {
+  width:90px;
+  height: 90px;
+  object-fit: cover;
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+  font-weight: bold;
+}
+
+.banner {
+  width: 100%;
+  height: 250px;
+  display: block;
+}
+
+nav {
+  background-color:#003f73;
+  text-align: right;
+  padding: 10px;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  border-radius: 4px;
+}
+
+h2,h3 {
+  color: #005baa;
+  margin-left: 40px;
+  margin-top: 30px;
+}
+
+p, ul{
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+ul, li{
+  margin-bottom: 5px;
+}
+
+table {
+  width: 90%;
+  margin: auto;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 2px solid #005baa;
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #005baa;
+  color: white;
+}
+
+footer {
+  background-color: #005baa;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+
+/* =========================
+   Mobile (iPhone 11: max 414px)
+   ========================= */
+@media (max-width: 414px) {
+  header {
+    text-align:center;
+    flex-direction: column;
+  }
+ 
+  .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px ;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  nav {
+    text-align: center;
+}
+
+  nav a {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  p, ul {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}  
+
+
+/* =========================
+           Tablet 
+   ========================= */
+
+@media (max-width: 1024px){
+  header h1 {
+    font-size: 26px;
+  }
+
+  .logo {
+    width: 85px;
+    height: 85px;
+  }
+
+  nav a {
+    padding: 10px 12px;
+  }
+}
+
+/* =========================
+           Desktop 
+   ========================= */
+
+@media (min-width: 1025px){
+  header h1 {
+    font-size: 30px;
+  }
+}
