@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Room Reservation</title>
+<link rel=icon href=JujutsuKaisen.png type=image/png>
+<meta name=viewport content=width=device-width,initial-scale=1.0>
+<link rel=stylesheet href="tutorial14style.css">
+</head>
+
+<body>
+<center>
+
+<form>
+<p>Room Reservations</p>
+
+<table class=box>
+<tr>
+<th colspan=4 class=title><u>Personal details</u> *</th>
+</tr>
+
+<tr>
+<th>Full name</th>
+<td>:  <input type=text name=fullname size=20></td>
+<th>IC No</th>
+<td>:  <input type=text name=ic size=20></td>
+</tr>
+
+<tr>
+<th>Email address</th>
+<td>:  <input type=email name=email size=20></td>
+<th>Contact No</th>
+<td>:  <input type=text name=phone size=20></td>
+</tr>
+</table>
+</form>
+
+<form>
+<table class=box>
+<tr>
+<th colspan=4 class=title><u>Reservations</u> *</th>
+</tr>
+
+<tr>
+<th>Number of Room(s)</th>
+<td>:  <select>
+<option value="0">-Selection-</option>
+<option value="room 1">1</option>
+<option value="room 2">2</option>
+<option value="room 3">3</option>
+</select></td>
+<th>Payment Method</th>
+<td><input type=radio name=payment value=Cash>Cash
+    <input type=radio name=payment value=TNG>TNG</td>
+</tr>
+
+<tr>
+<th>Number of Adult(s)</th>
+<td>:  <select>
+<option value="0">-Selection-</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td>
+<th rowspan=5>Do you have any special request?</th>
+<td rowspan=5><textarea rows=5 cols=30></textarea></td>
+</tr>
+
+<tr>
+<th>Number of children</th>
+<td>:  <select>
+<option value="0">-Selection-</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+</select></td>
+</tr>
+
+<tr>
+<th>Check-in Date</th>
+<td>:  <input type=date name=checkin></td>
+</tr>
+
+<tr>
+<th>Check-out Date</th>
+<td>:  <input type=date name=checkout></td>
+</tr>
+
+<tr>
+<th>Room Preferences</th>
+<td>: <input type=checkbox name=room value=Deluxe>Deluxe
+    <input type=checkbox name=room value=Suite>Suite</td>
+</tr>
+
+</table>
+
+<br>
+
+<input type=submit value=Submit>
+<input type=reset value=Reset>
+
+</form>
+</body>
+</html>
+
+
+
+
