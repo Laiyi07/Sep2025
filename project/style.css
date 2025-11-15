@@ -440,6 +440,21 @@ ul, li {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+.admission-box p,
+.admission-box ul,
+.admission-box ol {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;    
+    width: 90%;           
+}
+
+.admission-box ol {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+}
+
 .admission-title {
     text-align: center;
     color: #005baa;
@@ -616,7 +631,7 @@ footer {
     .banner {
         height: 160px;
         object-fit: cover;
-  }
+    }
 
     .logo {
         width: 80px;
@@ -638,10 +653,19 @@ footer {
         margin: 5px 0;
     }
 
-    h2, h3 {
-        text-align: center;
-        margin-left: 0;
-        margin-right: 0;
+    .home-box,
+    .about-section,
+    .programmes-box,
+    .programmes-form-box,
+    .studentproject-box,
+    .slideshow-container,
+    .admission-box,
+    .admission-form-box,
+    .contact-box,
+    .form-box {
+        width: 95% !important;
+        margin: 15px auto;
+        padding: 18px;
     }
 
     p, ul {
@@ -649,45 +673,28 @@ footer {
         margin-right: 15px;
     }
 
-    .programmes-table {
-        font-size: 14px;
-    }
-
-    p,
-    ul {
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    .home-cards-container {
+    .home-sections {
         flex-direction: column;
-        width: 90%;
+        width: 100%;
+        gap: 15px;
     }
 
     .home-card {
         width: 100%;
     }
 
-    .home-box {
-        width: 92%;
-        padding: 18px;
-    }
-
-    .home-box h3 {
-        font-size: 20px;     
-    }
-
-    .home-box p {
-        margin-left: 5px;
-        margin-right: 5px;
+    .home-card h3 {
+        font-size: 20px;
     }
 
     .home-btn {
-        padding: 8px 15px;    
-        font-size: 15px;
+        padding: 8px 15px;
+        font-size: 16px;
     }
+
 }
 
+    
 /* ========================= TABLET ========================= */
 
 @media (max-width: 1024px) {
