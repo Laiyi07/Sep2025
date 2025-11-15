@@ -663,7 +663,7 @@ footer {
     .admission-form-box,
     .contact-box,
     .form-box {
-        width: 95% !important;
+        width: 90%;
         margin: 15px auto;
         padding: 18px;
     }
@@ -692,14 +692,14 @@ footer {
         font-size: 16px;
     }
     .home-sections {
-        flex-direction: column !important;
+        flex-direction: column;
         width: 95%;
         gap: 15px;
         align-items: center;
     }
 
     .home-card {
-        width: 100% !important;
+        width: 100% ;
         padding: 20px;
     }
 
@@ -741,3 +741,4 @@ footer {
         font-size: 30px;
     }
 }
+
