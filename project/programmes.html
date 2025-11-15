@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TechBridge College - School of Computing</title>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+<link rel=icon href=logo.jpg type=image/jpg>
+<link rel=stylesheet href=style.css>
+
+<script>
+function validateProgrammeForm() {
+
+  let form = document.forms["programmeForm"];
+
+  // Validate Full Name
+  let name = form.fullname.value;
+  if (name == "") {
+    alert("Please provide your Full Name!");
+    return false;
+  }
+
+  let lettersName = /^[A-Za-z '\-]+$/;
+  if(!name.match(lettersName)) {
+    alert("Please input alphabet characters for Full Name.");
+    return false;
+  }
+
+  // Validate Email
+  let email = form.email.value;
+  if (email == "") {
+    alert("Please provide your Email!");
+    return false;
+  }
+
+  if (email.indexOf("@") == -1) {
+    alert("Please enter a valid Email that contains '@'.");
+    return false;
+  }
+
+  // Validate Phone Number
+  let phone = form.phone.value;
+  if (phone == "") {
+    alert("Please provide your Phone Number!");
+    return false;
+  }
+
+  let lettersPhone = /^\+?[0-9]+$/;
+  if(!phone.match(lettersPhone)) {
+    alert("Please input numbers only for Phone Number.");
+    return false;
+  }
+
+  // Validate Programme
+  let programme = form.programme.value;
+  if (programme == "0") {
+    alert("Please select Programme!");
+    return false;
+  }
+
+  alert("Thank you! Our team will contact you soon.");
+  return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<a name="TOP"></a>
+
+<header>
+<img src=logo.jpg alt=TechBridge College Logo class="logo">
+<h1>TechBridge College</h1>
+</header>
+
+<img src=banner.jpg alt=TechBridge College Banner class="banner">
+
+<nav>
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+<a href="programmes.html">Programmes</a>
+<a href="studentprojects.html">Student Projects</a>
+<a href="admission & application.html">Admission & Application</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+
+<div class=programmes-box>
+<h2 class=programmes-title>Our Programmes</h2>
+<table class="programmes-table">
+<tr>
+<th>Program</th>
+<th>Duration</th>
+</tr>
+
+<tr><td><a href="diploma_cs.html">Diploma in Computer Science</a></td><td>2.5 Years</td></tr>
+
+<tr><td><a href="diploma_it.html">Diploma in Information Technology</a></td><td>2.5 Years</td></tr>
+
+<tr><td><a href="bachelor_cs.html">Bachelor in Computer Science (Hons.)</a></td><td>3 Years</td></tr>
+
+<tr><td><a href="bachelor_se.html">Bachelor in Software Engineering (Hons.)</a></td><td>3 Years</td></tr>
+
+<tr><td><a href="master_se.html">Master in Software Engineering</a></td><td>2 Years</td></tr>
+
+<tr><td><a href="master_ds.html">Master in Data Science</a></td><td>2 Years</td></tr>
+
+</table>
+</div>
+
+<br><br>
+
+<div class=programmes-form-box>
+<h3 class="programmes-form-title">Want to Know More About Our Programmes?</h3>
+<p style="text-align:center;margin-bottom:20px;">Fill in the quick form below and our team will contact you with more information.</p>
+
+<form name="programmeForm" onsubmit="return validateProgrammeForm()">
+<table class="programmes-form-table">
+
+<tr>
+<th>Full Name:</th>
+<td><input type=text name=fullname placeholder="Enter your full name"></td>
+</tr>
+
+<tr>
+<th>Email:</th>
+<td><input type=email name=email placeholder="example@gmail.com"></td>
+</tr>
+
+<tr>
+<th>Phone Number:</th>
+<td><input type=text name=phone placeholder="+60123456789"></td>
+</tr>
+
+<tr>
+<th>Programme Interested:</th>
+<td>
+<select name=programme>
+<option value="0">-Please select-</option> 
+<option value="DCS">Diploma in Computer Science</option> 
+<option value="DIT">Diploma in Information Technology</option>
+<option value="BCS">Bachelor in Computer Science(Hons.)</option>
+<option value="BSE">Bachelor in Software Engineering (Hons.)</option> 
+<option value="MSE">Master in Software Engineering</option>
+<option value="MDS">Master in Data Science</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td colspan=2 style=text-align:center;>
+<input type=submit value="Submit Request">
+</td>
+</tr>
+
+</table>
+</form>
+</div>
+
+<p><a href="#TOP">↑ BACK TO TOP</a></p>
+
+<footer>
+<p>&copy; 2025 TechBridge College - School of Computing. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

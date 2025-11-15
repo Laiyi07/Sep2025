@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TechBridge College - School of Computing</title>
+<meta name=viewport content=width=device-width, initial-scale=1.0>
+<link rel=icon href=logo.jpg type=image/jpg>
+<link rel=stylesheet href=style.css>
+
+<script>
+function validateForm() {
+  // get the form reference
+  let form = document.forms["contactForm"];
+
+  // Validate Full Name
+  let name = form.fullname.value;
+  if (name == "") {
+    alert("Please provide your Full Name!");
+    return false;
+  }
+
+// to validate text - only allow alphabet characters
+ var lettersName = /^[A-Za-z '\-]+$/;
+ if(!name.match(lettersName)) {
+  alert("Please input alphabet characters for Full Name.");
+  return false;
+  }
+
+  // Validate Email
+  let email = form.email.value;
+  if (email == "") {
+    alert("Please provide your Email!");
+    return false;
+  }
+
+  // Check if email contains '@'
+  if (email.indexOf("@") == -1) {
+    alert("Please enter a valid Email that contains '@'.");
+    return false;
+  }
+
+  // Validate Phone Number
+  let phone = form.number.value;
+  if (phone == "") {
+    alert("Please provide your Phone Number!");
+    return false;
+  }
+
+// to validate text - only allow number
+ var lettersPhone = /^\+?[0-9]+$/;
+ if(!phone.match(lettersPhone))
+ {
+  alert("Please input number for phone number.");
+  return false;
+ }
+
+  // Validate Enquiry Type
+  let enquiryType = form.enquiry.value;
+  if (enquiryType == "0") {
+    alert("Please select an Enquiry Type!");
+    return false;
+  }
+
+  // Validate Message (Your Enquiry)
+  let message = form.text.value;
+  if (message == "") {
+    alert("Please enter your Enquiry message!");
+    return false;
+  }
+
+  // If everything is okay
+  alert("Thank you! Your enquiry has been submitted.");
+  return true;
+}
+</script>
+
+</head>
+
+<body>
+
+<a name="TOP"></a>
+
+<header>
+<img src=logo.jpg alt=TechBridge College Logo class="logo">
+<h1>TechBridge College</h1>
+</header>
+
+<img src=banner.jpg alt=TechBridge College Banner class="banner">
+
+
+<nav>
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+<a href="programmes.html">Programmes</a>
+<a href="studentprojects.html">Student Projects</a>
+<a href="admission & application.html">Admission & Application</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+
+
+<div class=contact-box>
+<h2 class=contact-title>Contact Us</h2>
+<p>We'd love to hear from you! Come reach out to our School of Computing for more information</p>
+<p><b>Address:</b> 
+School of Computing, TechBridge College, Jalan Teknologi, Johor Bahru, Malaysia</p>
+<p><b>Email📧:</b> 
+<a href="mailto:info@techbridge.edu.my">info@techbridge.edu.my</a></p>
+<p><b>Phone📞:</b>
+<a href="tel:+60123456789">+6012-345 6789</a></p>
+</div>
+<br>
+
+
+<p class=enquiry-text>For Enquiry: Should you require any assistance, kindly use the online enquiry form below to contact us. Thank you for your time.</p>
+
+<div class=form-box>
+<h3 class=form-title>Enquiry Form</h3>
+<form name=contactForm onsubmit="return validateForm()">
+<table class="contact-table">
+<tr>
+<th>Full Name:</th>
+<td><input type=text name=fullname size=40 placeholder="Enter your full name"></td>
+</tr>
+
+<tr>
+<th>Email:</th>
+<td><input type=text name=email size=40 placeholder="example@gmail.com"></td>
+</tr>
+
+<tr>
+<th>Phone Number:</th>
+<td><input type=text name=number size=40 placeholder="+60123456789"></td>
+</tr>
+
+<tr>
+<th>Enquiry type:</th>
+<td><select name="enquiry"><option value="0">-Please select enquiry type-</option> 
+<option value="GE">General Enquiry</option> 
+<option value="CP">Complaints</option>
+<option value="SS">Scholarship</option>
+</select></td>
+</tr>
+
+<tr>
+<th>Your Enquiry:</th>
+<td><textarea rows=4 cols=30 name=text placeholder="Write a short message..."></textarea></td>
+</tr>
+
+<tr>
+<td colspan=2 style=text-align:center><input type=submit value=Submit></td>
+</tr>
+
+</table>
+</form>
+</div>
+
+
+<p><a href="#TOP">↑ BACK TO TOP</a></p>
+
+<footer>
+<p>&copy; 2025 TechBridge College - School of Computing. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
