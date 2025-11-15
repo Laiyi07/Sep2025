@@ -1,5 +1,8 @@
 html, body {
   overflow-x: hidden;
+  width: 100%;
+  margin:0;
+  padding:0;
 }
 
 body {
@@ -31,7 +34,6 @@ header h1 {
 
 .banner {
   width: 100%;
-  max-width: 100%;
   height: auto;
   display: block;
   object-fit: cover;
@@ -56,16 +58,11 @@ nav a:hover {
 }
 
 
-h2 {
+h2, h3 {
     color: #005baa;
     text-align: center;
     margin-top: 30px;
-}
-
-h3 {
-    color: #005baa;
-    margin-left: 40px;
-    margin-top: 30px;
+    margin-left: 0;
 }
 
 p, ul {
