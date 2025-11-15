@@ -623,14 +623,15 @@ footer {
 /* ========================= MOBILE ========================= */
 
 @media (max-width: 414px) {
+    html, body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+
     header {
         text-align: center;
         flex-direction: column;
-    }
-
-    .banner {
-        height: 160px;
-        object-fit: cover;
     }
 
     .logo {
@@ -643,6 +644,14 @@ footer {
         font-size: 22px;
     }
 
+
+    .banner {
+        height: 160px;
+        object-fit: cover;
+        width: 100%;
+    }
+
+
     nav {
         text-align: center;
     }
@@ -651,7 +660,28 @@ footer {
         display: block;
         padding: 10px;
         margin: 5px 0;
+        font-size: 16px;
     }
+
+    h2 {
+        font-size: 22px;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+
+    p, ul, li {
+        font-size: 15px;
+        margin-left: 15px;
+        margin-right: 15px;
+        line-height: 1.45;
+    }
+
 
     .home-box,
     .about-section,
@@ -663,34 +693,13 @@ footer {
     .admission-form-box,
     .contact-box,
     .form-box {
-        width: 90%;
+        width: 92%;
         margin: 15px auto;
-        padding: 18px;
+        padding: 15px;
+        border-radius: 12px;
     }
 
-    p, ul {
-        margin-left: 15px;
-        margin-right: 15px;
-    }
 
-    .home-sections {
-        flex-direction: column;
-        width: 100%;
-        gap: 15px;
-    }
-
-    .home-card {
-        width: 100%;
-    }
-
-    .home-card h3 {
-        font-size: 20px;
-    }
-
-    .home-btn {
-        padding: 8px 15px;
-        font-size: 16px;
-    }
     .home-sections {
         flex-direction: column;
         width: 95%;
@@ -699,8 +708,12 @@ footer {
     }
 
     .home-card {
-        width: 100% ;
-        padding: 20px;
+        width: 100%;
+        padding: 18px;
+    }
+
+    .home-card h3 {
+        font-size: 20px;
     }
 
     .home-card p {
@@ -714,6 +727,30 @@ footer {
         font-size: 15px;
     }
 
+
+    .slide-img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+
+    button,
+    .project-btn,
+    .contact-table input[type="submit"],
+    .admission-table input[type="submit"] {
+        padding: 8px 14px;
+        font-size: 14px;
+    }
+
+
+    table, th, td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    th {
+        font-size: 15px;
+    }
 }
 
     
@@ -741,4 +778,3 @@ footer {
         font-size: 30px;
     }
 }
-
