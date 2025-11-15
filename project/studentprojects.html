@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TechBridge College - School of Computing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logo.jpg" type="image/jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+setInterval(function() { changeSlide(1); }, 4000);
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}
+
+function filterProjects(category) {
+    let slides = document.getElementsByClassName("slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        let type = slides[i].getAttribute("data-category");
+
+        if (category === "all" || type === category) {
+            slides[i].style.display = "block";
+        } else {
+            slides[i].style.display = "none";
+        }
+    }
+
+    slideIndex = 1; // reset
+}
+</script>
+
+<a name="TOP"></a>
+
+<header>
+<img src="logo.jpg" alt="TechBridge College Logo" class="logo">
+<h1>TechBridge College</h1>
+</header>
+
+<img src="banner.jpg" alt="TechBridge College Banner" class="banner">
+
+<nav>
+<a href="home.html">Home</a>
+<a href="about.html">About</a>
+<a href="programmes.html">Programmes</a>
+<a href="studentprojects.html">Student Projects</a>
+<a href="admission & application.html">Admission & Application</a>
+<a href="contact.html">Contact Us</a>
+</nav>
+
+<div class="studentproject-box">
+<h2 class=studentproject-title>Student Projects</h2>
+<p>Our students work on real-world projects, developing apps, websites, and software.</p>
+</div>
+
+<br>
+
+<div class="project-filter">
+<button onclick="filterProjects('all')">All</button>
+<button onclick="filterProjects('website')">Website Design</button>
+<button onclick="filterProjects('game')">Game Programming</button>
+<button onclick="filterProjects('graphics')">Computer Graphics</button>
+</div>
+
+<div class="slideshow-container">
+
+
+<div class="slide fade" data-category="website" style="display:block;">
+<img src="website.jpg" class="slide-img">
+<div class="slide-text">
+<h3>Website Design Projects</h3>
+<p>A website project created using HTML, CSS, and JavaScript.</p>
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
+
+<div class="slide fade" data-category="game">
+<img src="game.jpg" class="slide-img">
+<div class="slide-text">
+<h3>Game Programming Projects</h3>
+<p>A game developed using Python or Unity with interactive gameplay.</p>
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
+
+
+<div class="slide fade" data-category="graphics">
+<img src="graphics.jpg" class="slide-img">
+<div class="slide-text">
+<h3>Computer Graphics Projects</h3>
+<p>Graphic and animation projects created with design software.</p>
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
+
+
+<a class="prev" onclick="changeSlide(-1)">❮</a>
+<a class="next" onclick="changeSlide(1)">❯</a>
+
+</div>
+
+<p><a href="#TOP">↑ BACK TO TOP</a></p>
+
+<footer>
+<p>&copy; 2025 TechBridge College - School of Computing. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
