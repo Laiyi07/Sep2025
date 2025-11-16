@@ -367,6 +367,7 @@ ul, li {
 .slide-text h3 {
     color: #005baa;
     margin-bottom: 8px;
+    text-align:center;
 }
 
 .project-btn {
@@ -725,7 +726,8 @@ footer {
     .studentproject-title,
     .admission-title,
     .form-title,
-    .contact-title { 
+    .contact-title,
+    .slide-title { 
         width: 90%;
         margin: 15px auto;
 
