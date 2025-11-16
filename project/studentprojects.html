@@ -2,77 +2,61 @@
 <html>
 <head>
 <title>TechBridge College - School of Computing</title>
-<meta name=viewport content=width=device-width, initial-scale=1.0>
-<link rel=icon href=logo.jpg type=image/jpg>
-<link rel=stylesheet href=style.css>
-
-<script>
-function validateProgrammeForm() {
-
-  let form = document.forms["programmeForm"];
-
-  // Validate Full Name
-  let name = form.fullname.value;
-  if (name == "") {
-    alert("Please provide your Full Name!");
-    return false;
-  }
-
-  let lettersName = /^[A-Za-z '\-]+$/;
-  if(!name.match(lettersName)) {
-    alert("Please input alphabet characters for Full Name.");
-    return false;
-  }
-
-  // Validate Email
-  let email = form.email.value;
-  if (email == "") {
-    alert("Please provide your Email!");
-    return false;
-  }
-
-  if (email.indexOf("@") == -1) {
-    alert("Please enter a valid Email that contains '@'.");
-    return false;
-  }
-
-  // Validate Phone Number
-  let phone = form.phone.value;
-  if (phone == "") {
-    alert("Please provide your Phone Number!");
-    return false;
-  }
-
-  let lettersPhone = /^\+?[0-9]+$/;
-  if(!phone.match(lettersPhone)) {
-    alert("Please input numbers only for Phone Number.");
-    return false;
-  }
-
-  // Validate Programme
-  let programme = form.programme.value;
-  if (programme == "0") {
-    alert("Please select Programme!");
-    return false;
-  }
-
-  alert("Thank you! Our team will contact you soon.");
-  return true;
-}
-</script>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="logo.jpg" type="image/jpg">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+setInterval(function() { changeSlide(1); }, 4000);
+
+function showSlides(n) {
+    let slides = document.getElementsByClassName("slide");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+}
+
+function filterProjects(category) {
+    let slides = document.getElementsByClassName("slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        let type = slides[i].getAttribute("data-category");
+
+        if (category === "all" || type === category) {
+            slides[i].style.display = "block";
+        } else {
+            slides[i].style.display = "none";
+        }
+    }
+
+    slideIndex = 1; // reset
+}
+</script>
+
 <a name="TOP"></a>
 
 <header>
-<img src=logo.jpg alt=TechBridge College Logo class="logo">
+<img src="logo.jpg" alt="TechBridge College Logo" class="logo">
 <h1>TechBridge College</h1>
 </header>
 
-<img src=banner.jpg alt=TechBridge College Banner class="banner">
+<img src="banner.jpg" alt="TechBridge College Banner" class="banner">
 
 <nav>
 <a href="home.html">Home</a>
@@ -83,76 +67,55 @@ function validateProgrammeForm() {
 <a href="contact.html">Contact Us</a>
 </nav>
 
-<div class=programmes-box>
-<h2 class=programmes-title>Our Programmes</h2>
-<table class="programmes-table">
-<tr>
-<th>Program</th>
-<th>Duration</th>
-</tr>
-
-<tr><td><a href="diploma_cs.html">Diploma in Computer Science</a></td><td>2.5 Years</td></tr>
-
-<tr><td><a href="diploma_it.html">Diploma in Information Technology</a></td><td>2.5 Years</td></tr>
-
-<tr><td><a href="bachelor_cs.html">Bachelor in Computer Science (Hons.)</a></td><td>3 Years</td></tr>
-
-<tr><td><a href="bachelor_se.html">Bachelor in Software Engineering (Hons.)</a></td><td>3 Years</td></tr>
-
-<tr><td><a href="master_se.html">Master in Software Engineering</a></td><td>2 Years</td></tr>
-
-<tr><td><a href="master_ds.html">Master in Data Science</a></td><td>2 Years</td></tr>
-
-</table>
+<div class="studentproject-box">
+<h2 class=studentproject-title>Student Projects</h2>
+<p>Our students work on real-world projects, developing apps, websites, and software.</p>
 </div>
 
-<br><br>
+<br>
 
-<div class=programmes-form-box>
-<h3 class="programmes-form-title">Want to Know More About Our Programmes?</h3>
-<p style="text-align:center;margin-bottom:20px;">Fill in the quick form below and our team will contact you with more information.</p>
+<div class="project-filter">
+<button onclick="filterProjects('all')">All</button>
+<button onclick="filterProjects('website')">Website Design</button>
+<button onclick="filterProjects('game')">Game Programming</button>
+<button onclick="filterProjects('graphics')">Computer Graphics</button>
+</div>
 
-<form name="programmeForm" onsubmit="return validateProgrammeForm()">
-<table class="programmes-form-table">
+<div class="slideshow-container">
 
-<tr>
-<th>Full Name:</th>
-<td><input type=text name=fullname placeholder="Enter your full name"></td>
-</tr>
 
-<tr>
-<th>Email:</th>
-<td><input type=email name=email placeholder="example@gmail.com"></td>
-</tr>
+<div class="slide fade" data-category="website" style="display:block;">
+<img src="website.jpg" class="slide-img">
+<div class="slide-text">
+<h3 class="slide-title">Website Design Projects</h3>
+<p>A website project created using HTML, CSS, and JavaScript.</p>
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
 
-<tr>
-<th>Phone Number:</th>
-<td><input type=text name=phone placeholder="+60123456789"></td>
-</tr>
+<div class="slide fade" data-category="game">
+<img src="game.jpg" class="slide-img">
+<div class="slide-text">
+<h3 class="slide-title">Game Programming Projects</h3>
+<p>A game developed using Python or Unity with interactive gameplay.</p>
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
 
-<tr>
-<th>Programme Interested:</th>
-<td>
-<select name=programme>
-<option value="0">-Please select-</option> 
-<option value="DCS">Diploma in Computer Science</option> 
-<option value="DIT">Diploma in Information Technology</option>
-<option value="BCS">Bachelor in Computer Science(Hons.)</option>
-<option value="BSE">Bachelor in Software Engineering (Hons.)</option> 
-<option value="MSE">Master in Software Engineering</option>
-<option value="MDS">Master in Data Science</option>
-</select>
-</td>
-</tr>
 
-<tr>
-<td colspan=2 style=text-align:center;>
-<input type=submit value="Submit Request">
-</td>
-</tr>
+<div class="slide fade" data-category="graphics">
+<img src="graphics.jpg" class="slide-img">
+<div class="slide-text">
+<h3 class="slide-title">Computer Graphics Projects</h3>
+<p>Graphic and animation projects created with design software.</p>
+<a href="#" class="project-btn">View Project</a>
+</div>
+</div>
 
-</table>
-</form>
+
+<a class="prev" onclick="changeSlide(-1)">❮</a>
+<a class="next" onclick="changeSlide(1)">❯</a>
+
 </div>
 
 <p><a href="#TOP">↑ BACK TO TOP</a></p>
