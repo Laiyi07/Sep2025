@@ -155,7 +155,12 @@ ul, li {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
-.about-section h2,
+.about-title {
+    text-align: center;
+    color: #005baa;
+    margin-top: 0;
+}
+
 .about-section h3 {
     margin-top: 15px;
     color: #005baa;
@@ -674,12 +679,12 @@ footer {
 
     .home-sections {
         flex-direction: column;
-        width: 100%;
+        width: 90%;
         gap: 15px;
     }
 
     .home-card {
-        width: 100%;
+        width: 90%;
     }
 
     .home-card h3 {
@@ -692,13 +697,13 @@ footer {
     }
     .home-sections {
         flex-direction: column;
-        width: 95%;
+        width: 90%;
         gap: 15px;
         align-items: center;
     }
 
     .home-card {
-        width: 100%;
+        width: 95%;
         padding: 20px;
     }
 
@@ -711,6 +716,19 @@ footer {
     .home-btn {
         padding: 10px 16px;
         font-size: 15px;
+    }
+
+    .home-title,
+    .about-title,
+    .programmes-title,
+    .programmes-form-title,
+    .studentproject-title,
+    .admission-title,
+    .form-title,
+    .contact-title { 
+        width: 90%;
+        margin: 15px auto;
+
     }
 
 }
