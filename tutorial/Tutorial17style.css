@@ -1,0 +1,50 @@
+body {
+    background: powderblue;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    text-weight:bold;
+    text-align:center;
+} 
+
+.number {
+    width: 80%;
+    margin: 25px auto;
+    padding: 20px;
+    background: #eef6ff;
+    border: 2px solid #7bb6fa;
+    border-radius: 15px;
+    text-align:center;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    border: 1px solid #7bb6fa;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+button {
+    margin: 8px;
+    padding: 10px 18px;
+    border: 1px solid #7bb6fa;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+}
+
+.add,
+.subtract,
+.mutiply,
+.divide {
+    background: #7bb6fa
+}
+
+
+
